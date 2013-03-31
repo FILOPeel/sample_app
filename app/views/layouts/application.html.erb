@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lowenstein | <%= yield(:title) %> </title>
+  <title><%= full_title(yield(:title)) %> </title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= link_to "about", about_path %>
+<%= link_to "help", help_path %>
+<%= link_to "menu", menu_path %>
 <%= yield %>
 
 </body>
